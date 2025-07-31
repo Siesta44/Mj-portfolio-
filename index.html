@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mark Joseph Peralta's Prepared Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0D1B2A;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 0;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(270deg, #0D1B2A, #1B263B, #415A77, #778DA9, #0D1B2A);
+      background-size: 1000% 1000%;
+      animation: waveColors 30s ease infinite;
+    }
+    @keyframes waveColors {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #E0E1DD;
+    }
+    p {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      padding: 0 20px;
+      text-align: center;
+      color: #D9D9D9;
+    }
+    .portfolio-image {
+      max-width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .button-links {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .button-links button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #1B263B;
+      color: #ffffff;
+      border-radius: 25px;
+      transition: 0.3s ease;
+    }
+    .button-links button:hover {
+      background-color: #415A77;
+    }
+    section {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: rgba(13, 27, 42, 0.8);
+    }
+    h2 {
+      text-align: center;
+      color: #E0E1DD;
+      margin-bottom: 25px;
+    }
+    h3, h4 {
+      color: #E0E1DD;
+      margin-top: 10px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      color: #E5E5E5;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .category-title {
+      cursor: pointer;
+      color: #A9BCD0;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #2E3C51;
+      transition: background-color 0.3s;
+    }
+    .category-title:hover {
+      background-color: #3E4A5E;
+    }
+    .category-content {
+      display: none;
+      padding: 10px 15px;
+      margin: 5px 0 15px 0;
+      border-left: 4px solid #778DA9;
+      background-color: #1C1F26;
+      border-radius: 4px;
+      color: #E5E5E5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mark Joseph Peralta's Web Portfolio</h1>
+  <p>This portfolio is created as an introduction about myself. It includes knowledge about myself to get to know me a little more. You can also check some of my social media links to see what I do in my leisure time and don't forget to support me!</p>
+
+  <a href="https://ibb.co/XfPnr0Q8">
+    <img src="https://i.ibb.co/9m0xkKDt/FB-IMG-1753827916665.jpg" alt="Mark's Photo" class="portfolio-image">
+  </a>
+  <div class="button-links">
+    <button onclick="window.open('https://open.spotify.com/playlist/7iDwPuUsd0iud5NdiyGQjt?si=WKhki6ZYTDiBkOaXbpwTOw', '_blank')">My Spotify</button>
+    <button onclick="window.open('https://www.youtube.com/@siesta44', '_blank')">My YouTube</button>
+    <button onclick="window.open('https://github.com/Siesta44', '_blank')">My GitHub</button>
+  </div>
+
+  <section>
+    <h2>Categories</h2>
+    <!-- Category contents omitted for brevity -->
+  </section>
+
+  <div class="button-links">
+    <button onclick="goToNextPage()">Next Page</button>
+  </div>
+
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
+
+  <script>
+    function goToNextPage() {
+      const sound = document.getElementById('click-sound');
+      sound.play();
+      setTimeout(() => {
+        window.location.href = './marisa.html';
+      }, 150);
+    }
+  </script>
+
+</body>
+</html>

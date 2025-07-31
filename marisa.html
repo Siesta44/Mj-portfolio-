@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Floating Marisa Kisame</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(270deg, #0D1B2A, #1B263B, #415A77, #0D1B2A);
+      background-size: 800% 800%;
+      animation: waveColors 20s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    @keyframes waveColors {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    .floating-gif {
+      width: 250px;
+      animation: float 4s ease-in-out infinite;
+      z-index: 10;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: #415A77;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .button:hover {
+      background-color: #778DA9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Marisa Kisame Floating</h1>
+  <img src="https://i.ibb.co/xK8GVMcs/2025073119432558.png" alt="Floating Marisa" class="floating-gif" />
+
+  <button class="button" onclick="playMusic()">▶️ Play Music</button>
+  <button class="button" onclick="goBack()">⬅️ Back to Main Page</button>
+
+  <audio id="bg-music" src="https://files.catbox.moe/dq3wvd.mp3" loop></audio>
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
+
+  <script>
+    function playMusic() {
+      const bg = document.getElementById("bg-music");
+      bg.play();
+    }
+
+    function goBack() {
+      const click = document.getElementById("click-sound");
+      click.play();
+      setTimeout(() => {
+        window.location.href = './index.html';
+      }, 150);
+    }
+  </script>
+
+</body>
+</html>
